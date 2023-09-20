@@ -2,7 +2,7 @@
 
 select *from registro_entrada
 update registro_entrada set cedula_empleado='082345679 '
-where fecha = '2023-08-19'
+where extract (month from fecha) ='08'
 ---------------------------------------
 
 select cedula_empleado,fecha,hora from registro_entrada
