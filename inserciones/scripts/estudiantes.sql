@@ -3,9 +3,10 @@
 select nombre,cedula from estudiantes
 
 select nombre from estudiantes
-where fecha_nacimiento = '2009-09-19'
+where cedula like '17%'
 
 select nombre,apellido from estudiantes
+where nombre like 'a%'
 
 create table estudiantes (
 	cedula char(10)  not null,
@@ -16,6 +17,11 @@ create table estudiantes (
 	
 	constraint estudiantes_pk primary Key(cedula)
 ) 
+insert into estudiantes(cedula, nombre,apellido,email,fecha_nacimiento)
+values ('1758300088','anahi','vega','abc@gmail.com','19/09/2004')
+
+insert into estudiantes(cedula, nombre,apellido,email,fecha_nacimiento)
+values ('1758300089','daniel','chavez','abc@gmail.com','19/09/2000')
 
 insert into estudiantes(cedula, nombre,apellido,email,fecha_nacimiento)
 values ('0123456788','kevin','chavez','abc@gmail.com','19/09/2009')
