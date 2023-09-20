@@ -1,5 +1,10 @@
 --tabla registro entrada
 
+select *from registro_entrada
+update registro_entrada set cedula_empleado='082345679 '
+where fecha = '2023-08-19'
+---------------------------------------
+
 select cedula_empleado,fecha,hora from registro_entrada
 
 select *from registro_entrada
@@ -15,6 +20,8 @@ create table registro_entrada (
 	hora time not null,
 	constraint registro_entrada_pk primary Key(codigo_registro)
 ) 
+insert into registro_entrada(codigo_registro, cedula_empleado,fecha,hora)
+values ('15','1234567899','19/08/2023','20:26')
 
 insert into registro_entrada(codigo_registro, cedula_empleado,fecha,hora)
 values ('00','1234567890','19/09/2023','22:26')

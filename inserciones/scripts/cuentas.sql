@@ -1,4 +1,10 @@
 --tabla cuentas
+
+select *from cuentas
+update cuentas set saldo='10'
+where cedula_propietario like '17%'
+---------------------------------------
+
 select numero_cuenta,saldo from cuentas
 
 select *from cuentas
@@ -14,6 +20,8 @@ create table cuentas (
 	saldo money not null,
 	constraint cuentas_pk primary Key(numero_cuenta)
 ) 
+insert into cuentas(numero_cuenta, cedula_propietario,fecha_creacion,saldo)
+values ('00012','17894','10/7/2022','555')
 
 insert into cuentas(numero_cuenta, cedula_propietario,fecha_creacion,saldo)
 values ('00011','01234','19/7/2023','1000')

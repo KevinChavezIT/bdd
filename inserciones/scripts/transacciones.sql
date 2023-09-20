@@ -1,5 +1,12 @@
 --tabla transacciones
 
+select *from transacciones
+update transacciones set tipo='T'
+where monto > '100' and monto <'500'
+and fecha = '2023-09-19'
+and hora between '14:00:00' and '20:00:00'
+---------------------------------------
+
 select * from transacciones
 where tipo = 'D'
 
@@ -18,6 +25,8 @@ create table transacciones (
 	hora time not null,
 	constraint transacciones_pk primary Key(codigo)
 ) 
+insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
+values ('11','54585','200','D','19/09/2023','19:39')
 
 insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
 values ('0','01234','155','C','19/09/2023','22:39')

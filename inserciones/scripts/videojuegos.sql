@@ -1,5 +1,10 @@
 --tabla videojuegos
 
+select *from videojuegos
+update videojuegos set descripcion='mejor puntuado'
+where valoracion > '9'
+---------------------------------------
+
 select * from videojuegos
 where nombre like 'c%'
 
@@ -16,6 +21,9 @@ create table videojuegos (
 	valoracion int not null,
 	constraint videojuegos_pk primary Key(codigo)
 ) 
+insert into videojuegos(codigo,nombre,descripcion,valoracion)
+values ('9','spiderman','saltos','10')
+
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
 values ('8','cars','correr','9')
 

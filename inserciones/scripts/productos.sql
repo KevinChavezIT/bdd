@@ -1,5 +1,9 @@
 --tabla productos
 
+select *from productos
+update productos set stock='0'
+where descripcion is null
+
 create table productos (
 	codigo int not null,
 	nombre varchar(50) not null,
