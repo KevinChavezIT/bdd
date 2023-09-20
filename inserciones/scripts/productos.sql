@@ -12,6 +12,28 @@ create table productos (
 	stock int not null,
 	constraint productos_pk primary Key(codigo)
 ) 
+insert into productos(codigo,nombre,descripcion,precio,stock) 
+values (11,'Jabón','Lava todo',3.50,10);
+insert into productos(codigo,nombre,descripcion,precio,stock) 
+values (21,'Shampoo','Savital',2.50,20);
+insert into productos(codigo,nombre,descripcion,precio,stock) 
+values (31,'Deja','Deja',1.50,30);
+insert into productos(codigo,nombre,descripcion,precio,stock) 
+values (41,'Pasta dental','Fortident',3.0,40);
+insert into productos(codigo,nombre,descripcion,precio,stock) 
+values (51,'Cera','Cera de piso',2.50,50);
+insert into productos(codigo,nombre,precio,stock) 
+values (61,'Pan',1.50,50);
+insert into productos(codigo,nombre,precio,stock) 
+values (71,'Queso',5.50,60);
+insert into productos(codigo,nombre,precio,stock)
+values (81,'Leche',2.50,70);
+insert into productos(codigo,nombre,precio,stock)
+values (91,'Jamon',1.00,120);
+insert into productos(codigo,nombre,precio,stock)
+values (15,'Coca Cola',3.50,300);
+
+
 select * from productos 
 where nombre like 'q%'
 
