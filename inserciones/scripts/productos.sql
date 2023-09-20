@@ -8,6 +8,14 @@ create table productos (
 	stock int not null,
 	constraint productos_pk primary Key(codigo)
 ) 
+select * from productos 
+where nombre like 'q%'
+
+select * from productos 
+where descripcion is null
+ 
+select * from productos  
+where precio between '2' and '3'
 
 insert into productos(codigo, nombre, descripcion,precio,stock)
 values ('1','cable','usb','1.00','5')

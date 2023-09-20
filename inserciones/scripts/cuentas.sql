@@ -1,4 +1,11 @@
 --tabla cuentas
+select numero_cuenta,saldo from cuentas
+
+select *from cuentas
+where fecha_creacion between '2023-07-19' and '2023-09-19'
+
+select numero_cuenta,saldo from cuentas
+where fecha_creacion between '2023-07-19' and '2023-09-19'
 
 create table cuentas (
 	numero_cuenta char(5)  not null,
@@ -7,6 +14,9 @@ create table cuentas (
 	saldo money not null,
 	constraint cuentas_pk primary Key(numero_cuenta)
 ) 
+
+insert into cuentas(numero_cuenta, cedula_propietario,fecha_creacion,saldo)
+values ('00011','01234','19/7/2023','1000')
 
 insert into cuentas(numero_cuenta, cedula_propietario,fecha_creacion,saldo)
 values ('00001','01234','19/9/2023','1000')
