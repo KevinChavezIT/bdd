@@ -1,4 +1,3 @@
-
 create table cliente(
 	cedula char(10) not null,
 	nombre varchar (50) not null,
@@ -24,8 +23,12 @@ add constraint compras_cliente_fk
 foreign key (cedula)
 references cliente(cedula)
 
-select * from cliente
 select * from compras
+select * from cliente
+
+insert into cliente (cedula, nombre, apellido)
+values('1758389000', 'Keana', 'D2');
+delete from cliente where cedula='1758389000'
 
 insert into cliente (cedula, nombre, apellido)
 values('0123584678', 'Daniel', 'Tubon');

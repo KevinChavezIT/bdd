@@ -33,6 +33,8 @@ references personas(cedula)
 select * from  prestamo; 
 select * from personas;
 
+delete from personas where cedula = '1758389000'
+
 insert into personas(cedula, nombre, apellido, numero_hijos, estatura, fecha_nacimiento,hora_nacimiento,cantidad_ahorrada)
 values ('5897884589','Keyla','Vega','1', '1.50','22/05/2023','12:44', '500,33');
 insert into personas(cedula, nombre, apellido, numero_hijos, estatura, fecha_nacimiento,hora_nacimiento,cantidad_ahorrada)
